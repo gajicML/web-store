@@ -23,16 +23,36 @@ class AddItemForm extends React.Component {
 
     render(){
         return(
-            <form className="addItemForm"  onSubmit={this.createItem}>
-                <input name="name" ref={this.nameRef} type='text' placeholder='Name' />
-                <input name="price" ref={this.priceRef} type='text' placeholder='Price' />
-                <select name="status" ref={this.statusRef}>
-                    <option value="available">Na stanju</option>
-                    <option value="unavailable">Trenutno nema</option>
-                </select>
-                <textarea name="desc" ref={this.descRef}  placeholder='Description' />
-                <input name="image" ref={this.imageRef} type='text' placeholder='Image' />
-                <button type='submit'>Add item</button>
+            <form className="addItemForm card"  onSubmit={this.createItem}>
+                <div className="card-body">
+                    <div className="form-row">
+                        <div className="form-group col-md-4"> 
+                            <input name="name" ref={this.nameRef} type='text' placeholder='Name' className="form-control" />
+                        </div>
+                        <div className="form-group col-md-4">
+                            <input name="price" ref={this.priceRef} type='text' placeholder='Price' className="form-control" />
+                        </div>
+                        <select className="form-group col-md-4" name="status" ref={this.statusRef}>
+                            <option value="available">Na stanju</option>
+                            <option value="unavailable">Trenutno nema</option>
+                        </select>
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group col-md-12"> 
+                            <textarea name="desc" ref={this.descRef}  placeholder='Description' className="form-control"/>
+                        </div>
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group col-md-12"> 
+                            <input name="image" ref={this.imageRef} type='text' placeholder='Image url' className="form-control" />
+                        </div>
+                        
+                    </div>
+
+                    <button type="submit" className="btn btn-primary btn btn-block">Add item</button>
+                </div>
             </form>
         )
     }

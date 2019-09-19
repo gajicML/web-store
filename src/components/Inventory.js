@@ -8,6 +8,9 @@ class Inventory extends React.Component {
                 Inventory
 
                 <AddItemForm addItem={this.props.addItem}/>
+
+                <button onClick={this.props.loadSampleItems} className="btn btn-light btn mt-2">Load sample items</button>
+                
             </div>
         )
     }
