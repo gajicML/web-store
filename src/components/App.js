@@ -8,7 +8,7 @@ import sampleItems from '../sample-items';
 class App extends React.Component {
     state = {
         items: {},
-        orders: {},
+        order: {},
     }
 
     addItem = item => {
@@ -18,6 +18,14 @@ class App extends React.Component {
             items: items
         })
 
+    }
+
+    addToOrder = key => {
+        const order = {...this.state.order};
+        order[key] = order[key] + 1 || 1;
+        this.setState({
+            order: order
+        })
     }
 
     loadSampleItems = () => {
@@ -33,12 +41,20 @@ class App extends React.Component {
                     <ul className="menu-list list-group">
                         {Object.keys(this.state.items).map(item => {
                             return(
-                                <Item key={item} details={this.state.items[item]}/>
+                                <Item 
+                                    key={item} 
+                                    details={this.state.items[item]}
+                                    index={item}
+                                    addToOrder={this.addToOrder}
+                                />
                             )
                         })}
                     </ul>
                 </div>
-                <Order />
+                <Order 
+                    items={this.state.items}
+                    order={this.state.order}
+                />
                 <Inventory 
                     addItem={this.addItem}
                     loadSampleItems={this.loadSampleItems}    
