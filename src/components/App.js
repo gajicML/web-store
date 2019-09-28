@@ -25,6 +25,10 @@ class App extends React.Component {
                 order: JSON.parse(localStorageRef),
             });
         }
+
+         this.setState({
+            items: sampleItems
+        });
     };
 
     componentDidUpdate() {
@@ -48,6 +52,14 @@ class App extends React.Component {
         });
 
     };
+
+    updateItem = (key, updateItem) => {
+        const items = {...this.state.items};
+        items[key] = updateItem;
+        this.setState({
+            items: items
+        })
+    }
 
     addToOrder = key => {
         const order = {...this.state.order};
@@ -86,7 +98,9 @@ class App extends React.Component {
                 />
                 <Inventory 
                     addItem={this.addItem}
-                    loadSampleItems={this.loadSampleItems}    
+                    items={this.state.items}
+                    updateItem={this.updateItem}
+                    // loadSampleItems={this.loadSampleItems}    
                 />
             </div>
         );

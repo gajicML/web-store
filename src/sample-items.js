@@ -2,7 +2,7 @@
 const sampleItems = {
   item1: {
     name: 'Pacific Halibut',
-    image: '',
+    image: 'as',
     desc: 'Everyones favorite white fish. We will cut it to the size you need and ship it.',
     price: 1724,
     status: 'available'
