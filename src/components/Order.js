@@ -1,7 +1,14 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
+import PropTypes from 'prop-types';
 
 class Order extends React.Component {
+    static propTypes = {
+        items: PropTypes.object,
+        order: PropTypes.object,
+        removeFromOrder: PropTypes.func,
+    };
+
     renderOrder = key => {
         const count = this.props.order[key];
         const item = this.props.items[key];
@@ -17,7 +24,10 @@ class Order extends React.Component {
         }
         return(
             <li key={key}>
-              {item.name}  x{count}  {formatPrice(item.price * count)}
+                {item.name}  x{count}  {formatPrice(item.price * count)}
+                <button type="button" onClick={() => this.props.removeFromOrder(key)} className="close" aria-label="Close">
+                    &times;
+                </button>
             </li>
         )
     };

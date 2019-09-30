@@ -5,11 +5,16 @@ import Order from './Order';
 import Item from './Item';
 import sampleItems from '../sample-items';
 import base from '../base';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
     state = {
         items: {},
         order: {},
+    };
+
+    static propTypes = {
+        match: PropTypes.object,
     };
 
     componentDidMount(){
@@ -59,7 +64,15 @@ class App extends React.Component {
         this.setState({
             items: items
         })
-    }
+    };
+
+    deleteItem = (key) => {
+        const items = {...this.state.items};
+        items[key] = null;
+        this.setState({
+            items: items
+        })
+    };
 
     addToOrder = key => {
         const order = {...this.state.order};
@@ -67,6 +80,14 @@ class App extends React.Component {
         this.setState({
             order: order
         });
+    };
+
+    removeFromOrder = key => {
+        const order = {...this.state.order};
+        delete order[key];
+        this.setState({
+            order: order
+        })
     };
 
     loadSampleItems = () => {
@@ -95,11 +116,13 @@ class App extends React.Component {
                 <Order 
                     items={this.state.items}
                     order={this.state.order}
+                    removeFromOrder={this.removeFromOrder}
                 />
                 <Inventory 
                     addItem={this.addItem}
                     items={this.state.items}
                     updateItem={this.updateItem}
+                    deleteItem={this.deleteItem}
                     // loadSampleItems={this.loadSampleItems}    
                 />
             </div>

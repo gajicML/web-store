@@ -1,6 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class EditFishForm extends React.Component {
+
+    static propTypes = {
+        item: PropTypes.shape({
+            name: PropTypes.string,
+            price: PropTypes.number,
+            status: PropTypes.string,
+            desc: PropTypes.string,
+            image: PropTypes.string,
+        }),
+        updateItem: PropTypes.func,
+        deleteItem: PropTypes.func,
+        index: PropTypes.string,
+    };
 
     handleChange = (event) => {
         const updateItem = {
@@ -13,7 +27,7 @@ class EditFishForm extends React.Component {
 
     render(){
         return(
-            <form className="addItemForm card"  onSubmit={this.createItem}>
+            <form className="addItemForm card" >
                 <div className="card-body">
                     <div className="form-row">
                         <div className="form-group col-md-4"> 
@@ -73,7 +87,9 @@ class EditFishForm extends React.Component {
                         
                     </div>
                 </div>
+                <button className="btn btn-danger" onClick={() => this.props.deleteItem(this.props.index)}>Delete Item</button>
             </form>
+            
         )
     }
 }
