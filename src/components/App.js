@@ -95,6 +95,9 @@ class App extends React.Component {
             items: sampleItems
         });
     };
+
+    
+
     render() {
         return (
             <div className="catch-of-the-day container col-md-12 ">
@@ -123,6 +126,8 @@ class App extends React.Component {
                     items={this.state.items}
                     updateItem={this.updateItem}
                     deleteItem={this.deleteItem}
+                    authenticate={this.authenticate}
+                    storeId={this.props.match.params.storeId}
                     // loadSampleItems={this.loadSampleItems}    
                 />
             </div>
