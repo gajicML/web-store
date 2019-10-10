@@ -100,9 +100,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="catch-of-the-day container col-md-12 ">
+            <div className="container col-md-12 " id="web-store">
                 <div className="main_boxes header col-md-4">
-                    <Header tagline="Fruits and vegatables market"/>
+                    <Header tagline="Vegatables market"/>
                     <ul className="menu-list list-group">
                         {Object.keys(this.state.items).map(item => {
                             return(

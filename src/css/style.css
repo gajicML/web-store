@@ -1,36 +1,124 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: "Lato", sans-serif !important;
+  background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed  !important; 
+
 }
-.main_boxes{
-    float: left;
-    background: rgb(234, 248, 255);
-    height: 80vh;
-    overflow: scroll;
+#web-store {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  border-radius: 22px;
+  background: #fff;
+  height: 95vh;
+  width: 98%;
+  margin: 1%;
+}
+.main_boxes {
+	float: left;
+	height: 100vh;
+	overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.main_boxes.order {
 }
 
-.main_boxes.order{
-  background: rgb(255, 233, 233);
+.main_boxes.inventory {
 }
-.main_boxes.inventory{
-  background: rgb(217, 217, 217);
+ header {
+   text-align: center;
+ }
+.notfound {
+	color: #fff;
+	background: #000;
 }
 
-.notfound{
-  color: #fff;
+button.card-link[disabled] {
+	background: #de0000;
+	color: #fff;
+	border: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.card-body {}
+
+.card-title {
+	float: left;
+}
+
+.card-text {
+  clear: both;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+h6.card-subtitle {
+  float: right;
+  margin: 0.1em 1em !important;
+}
+
+li.list-group-item {
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+li.list-group-item .card{
+  border: none
+}
+  
+div.content-item {
+	box-sizing: border-box;
+	padding: 10px !important;
+}
+
+.form-signin {
+    max-width: 410px;
+    padding: 45px;
+    box-shadow: 1px 3px 11px 2px #313030;
+    margin: 0 auto;
+    background: #ffffffe0;
+    margin-top: 2em;
+    border-radius: 15px;
+}
+
+.form-signin h2 {
+    font-size: 1.5rem;
+    padding: 1em;
+    padding-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form-signin input{}
+
+#fullBg {  
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+#fullBg.notfound{
   background: #000;
 }
-.card-link[disabled] {
-  background: #de0000;
-  color: #fff;
-  border: none;
+
+.notfound h1{
+  text-align: center;
+  margin-top: 2em;
 }
 
-ul li{
-  list-style-type: none;
+div.no-gutters {
+  min-height: 130px;
+  border: 1px solid #e7e7e7;
 }
 
-
-
-.card-img-top,
-p.card-text{display: none;}
-
+button.card-link{
+  position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+div.card-img {border-radius: 0}

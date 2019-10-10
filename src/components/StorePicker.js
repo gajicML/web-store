@@ -13,27 +13,30 @@ class StorePicker extends  React.Component {
     goToStore = event => {
         event.preventDefault();
         const storeName = this.myInput.current.defaultValue;
-        console.log(storeName)
         this.props.history.push(`/store/${storeName}`);
     }
 
     render() {
         return( 
-            <div>
-                <form className="store-selector " onSubmit={this.goToStore}>
-                    <h2> Please Enter A Store</h2>
-                    <input 
-                        type="text" 
-                        required 
-                        placeholder="Store Name" 
-                        defaultValue={getFunName()} 
-                        ref={this.myInput}
-                    />
-                    <button type="submit"> Visit Store -></button>
-
-                </form>
+            <div id="fullBg">
+                <div className="container">
+                    <form onSubmit={this.goToStore} className="form-signin">
+                        <div className="form-group">
+                            <h2> Please Enter A Store</h2>
+                            <input 
+                                className="form-control input "
+                                type="text" 
+                                required 
+                                placeholder="Store Name" 
+                                defaultValue={getFunName()} 
+                                ref={this.myInput}
+                            />
+                            
+                        </div>
+                        <button type="submit" className="btn btn-lg btn-primary btn-block"> Visit Store &#8594;</button>
+                    </form>
+                </div>
             </div>
-            
         )
     }
 }

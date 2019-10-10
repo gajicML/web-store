@@ -3,8 +3,12 @@ import React from 'react';
 class NotFound extends React.Component {
     render() {
         return (
-            <div className="notfound col-md-12">
-                NotFound
+            <div id="fullBg" className="notfound">
+                <div  className="container">
+                    <div className="col-md-12">
+                        <h1>NOT FOUND</h1>
+                    </div>
+                </div>
             </div>
         )
     }
