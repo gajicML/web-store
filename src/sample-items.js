@@ -10,7 +10,7 @@ const sampleItems = {
 
   item2: {
     name: 'Tomato',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/13fEVvX6NUzRcZPlx4UKp0XLJPxyuKANC=w1903-h877-iv1',
     desc: 'These tender, mouth-watering beauties are a fantastic hit at any dinner party.',
     price: 3200,
     status: 'available'
@@ -18,7 +18,7 @@ const sampleItems = {
 
   item3: {
     name: 'Lettuce',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1c1BMSc613UcJuyR-YVRAqgzLXdRVyp6c=w1903-h877-iv1',
     desc: 'Big, sweet and tender. True dry-pack scallops from the icey waters of Alaska. About 8-10 per pound',
     price: 1684,
     status: 'unavailable'
@@ -34,7 +34,7 @@ const sampleItems = {
 
   item5: {
     name: 'Beans',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1HlEXO5SdPcg-vsZO_c2vXPZBNV7gcyIL=w1903-h877-iv1',
     desc: 'Crack these open and enjoy them plain or with one of our cocktail sauces',
     price: 4234,
     status: 'available'
@@ -42,7 +42,7 @@ const sampleItems = {
 
   item6: {
     name: 'Onion',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1w_tB47Y3kO4TKVgMyZQuXQkpC1qTUU4h=w1903-h877-iv1',
     desc: 'This flaky, oily salmon is truly the king of the sea. Bake it, grill it, broil it...as good as it gets!',
     price: 1453,
     status: 'available'
@@ -50,7 +50,7 @@ const sampleItems = {
 
   item7: {
     name: 'Parsley',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1GCa9GtrmupARRWIWNHrNjINnU3RxDYJu=w1903-h877-iv1',
     desc: 'A soft plump oyster with a sweet salty flavor and a clean finish.',
     price: 2543,
     status: 'available'
@@ -58,7 +58,14 @@ const sampleItems = {
 
   item8: {
     name: 'Pepper',
-    image: 'https://lh3.googleusercontent.com/u/0/d/1PcbBe2LiZtZY9Y2GvCiLmrV3PPmoaVod=w1920-h937-iv1',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1JjtfjzYNdtqnxo5DcSB5tGN4bMYOD8eC=w1903-h877-iv1',
+    desc: 'The best mussels from the Pacific Northwest with a full-flavored and complex taste.',
+    price: 425,
+    status: 'available'
+  },
+  item9: {
+    name: 'Pepper',
+    image: 'https://lh3.googleusercontent.com/u/0/d/1JjtfjzYNdtqnxo5DcSB5tGN4bMYOD8eC=w1903-h877-iv1',
     desc: 'The best mussels from the Pacific Northwest with a full-flavored and complex taste.',
     price: 425,
     status: 'available'

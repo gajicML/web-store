@@ -24,7 +24,11 @@ class Order extends React.Component {
         }
         return(
             <li key={key}>
-                {item.name}  x{count}  {formatPrice(item.price * count)}
+                <span className="order-wrap-items">
+                    <span className="item-name">{item.name}</span>  
+                    <span className="count">x {count}</span> 
+                    <span className="price"> {formatPrice(item.price * count)}</span>
+                </span>
                 <button type="button" onClick={() => this.props.removeFromOrder(key)} className="close" aria-label="Close">
                     &times;
                 </button>
@@ -46,10 +50,11 @@ class Order extends React.Component {
 
         return (
             <div className="main_boxes order col-md-4">
+                <h3>Order</h3>
                 <ul>
                     {orderIds.map(this.renderOrder)}
                 </ul>
-                <p>Total: {formatPrice(total)}</p>
+                <p className="total">Total: {formatPrice(total)}</p>
             </div>
         );
     };

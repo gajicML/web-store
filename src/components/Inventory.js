@@ -75,8 +75,8 @@ class Inventory extends React.Component {
         
         return (
             <div className="main_boxes inventory col-md-4">
-                Inventory
-                {logout}
+                <h3>Inventory</h3>
+                <div className="logout logout-fixed">{logout}</div>
 
                 {Object.keys(this.props.items).map(key => {
                     return <EditItemForm 

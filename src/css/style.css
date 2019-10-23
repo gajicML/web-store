@@ -1,33 +1,56 @@
 body {
-  font-family: "Lato", sans-serif !important;
-  background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed  !important; 
+	font-family: "Lato", sans-serif !important;
+	background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed !important;
+}
 
-}
 #web-store {
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  border-radius: 22px;
-  background: #fff;
-  height: 95vh;
-  width: 98%;
-  margin: 1%;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	border-radius: 22px;
+	background: #fff;
+	height: 95vh;
+	width: 98%;
+	margin: 1%;
 }
+
 .main_boxes {
 	float: left;
-	height: 100vh;
 	overflow: scroll;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-.main_boxes.order {
+	padding: 15px;
+	height: 92vh;
+	overflow-x: hidden;
 }
 
-.main_boxes.inventory {
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	background-color: #f9f9f9;
 }
- header {
-   text-align: center;
- }
+
+::-webkit-scrollbar {
+	width: 4px;
+	background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+	background-color: rgb(214, 214, 214);
+}
+
+.main_boxes.order {
+	background: #f6fff0;
+}
+.main_boxes.order h3{
+	text-align: center;
+}
+.main_boxes.inventory {}
+
+header {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
 .notfound {
 	color: #fff;
 	background: #000;
@@ -43,82 +66,157 @@ ul li {
 	list-style-type: none;
 }
 
-.card-body {}
+.card-body {
+	padding: 1rem !important;
+}
 
 .card-title {
 	float: left;
 }
 
 .card-text {
-  clear: both;
-  font-size: 14px;
-  line-height: 16px;
+	clear: both;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 h6.card-subtitle {
-  float: right;
-  margin: 0.1em 1em !important;
+	float: right;
+	margin: 0.1em 1em !important;
 }
 
 li.list-group-item {
-  padding: 0;
-  border: none;
-  background-color: unset;
+	padding: 0;
+	border: none;
+	background-color: unset;
 }
-li.list-group-item .card{
-  border: none
+
+li.list-group-item .card {
+	border: none;
+	box-shadow: 0px 0px 1px 1px #6cb40036;
+	background: #fdfffa;
 }
-  
+
 div.content-item {
 	box-sizing: border-box;
 	padding: 10px !important;
 }
 
 .form-signin {
-    max-width: 410px;
-    padding: 45px;
-    box-shadow: 1px 3px 11px 2px #313030;
-    margin: 0 auto;
-    background: #ffffffe0;
-    margin-top: 2em;
-    border-radius: 15px;
+	max-width: 410px;
+	padding: 45px;
+	box-shadow: 1px 3px 11px 2px #313030;
+	margin: 0 auto;
+	background: #ffffffe0;
+	margin-top: 2em;
+	border-radius: 15px;
 }
 
 .form-signin h2 {
-    font-size: 1.5rem;
-    padding: 1em;
-    padding-top: 0;
-    text-transform: uppercase;
-    text-align: center;
-}
-.form-signin input{}
-
-#fullBg {  
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed; 
-    background-size: cover;
-}
-#fullBg.notfound{
-  background: #000;
+	font-size: 1.5rem;
+	padding: 1em;
+	padding-top: 0;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-.notfound h1{
-  text-align: center;
-  margin-top: 2em;
+.form-signin input {}
+
+#fullBg {
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	background: url('https://www.allseasonsscarborough.co.uk/wp-content/uploads/2018/04/slidenew1-4.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+#fullBg.notfound {
+	background: #000;
+}
+
+.notfound h1 {
+	text-align: center;
+	margin-top: 2em;
 }
 
 div.no-gutters {
-  min-height: 130px;
-  border: 1px solid #e7e7e7;
+	min-height: 150px;
 }
 
-button.card-link{
-  position: absolute;
-    right: 10px;
-    bottom: 10px;
+button.card-link {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	border: 1px solid #dcdcdc;
 }
-div.card-img {border-radius: 0}
+
+div.card-img {
+	border-radius: 0
+}
+
+.logout{}
+.logout-fixed{
+	text-align: center;
+    float: right;
+	display: inline-block;
+}
+
+.main_boxes.order ul li{
+	font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.main_boxes.order ul{
+
+}
+.main_boxes.order .item-name{
+	display: inline-block;
+	width: 160px;
+}
+
+.main_boxes.order .count{
+	display: inline-block;
+	width: 90px;
+}
+.main_boxes.order .price{
+	float: right;
+    font-weight: bold;
+}
+
+
+.main_boxes.order .close{
+	color: #a4a4a4;
+
+}
+.order-wrap-items{
+	display: inline-block;
+	width: 90%;
+}
+
+.total{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	width: 87%;
+	text-align: right;
+}
+.inventory h3{
+	display: inline-block;
+	margin-bottom: 23px;
+
+}
+
+.inventory .card{
+	margin-bottom: 40px;
+    box-shadow: 0px 0px 1px 1px #6cb40036;
+    background: #fdfffa;
+}
+
+.card-body .btn-danger{
+
+}
