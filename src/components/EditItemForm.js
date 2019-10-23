@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class EditFishForm extends React.Component {
+class EditItemForm extends React.Component {
 
     static propTypes = {
         item: PropTypes.shape({
@@ -56,8 +56,8 @@ class EditFishForm extends React.Component {
                             value={this.props.item.status} 
                             onChange={this.handleChange}>
 
-                            <option value="available">Na stanju</option>
-                            <option value="unavailable">Trenutno nema</option>
+                            <option value="available">In Stock</option>
+                            <option value="unavailable">Sold Out</option>
                         </select>
                     </div>
 
@@ -94,4 +94,4 @@ class EditFishForm extends React.Component {
     }
 }
 
-export default EditFishForm;
+export default EditItemForm;

@@ -38,8 +38,8 @@ class AddItemForm extends React.Component {
                             <input name="price" ref={this.priceRef} type='text' placeholder='Price' className="form-control" />
                         </div>
                         <select className="form-group col-md-4" name="status" ref={this.statusRef}>
-                            <option value="available">Na stanju</option>
-                            <option value="unavailable">Trenutno nema</option>
+                            <option value="available">In stock</option>
+                            <option value="unavailable">Sold Out</option>
                         </select>
                     </div>
 
